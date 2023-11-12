@@ -7,7 +7,7 @@ async def trans_and_time(session: ClientSession,address):
         'to': f'{address}',
         'ps': '100',
         'p': '1',
-        'type': 'null',
+        'type': 'json',
     }
     try:
         async with session.get(f'https://voyager.online/api/txns',params=params) as response_time:
